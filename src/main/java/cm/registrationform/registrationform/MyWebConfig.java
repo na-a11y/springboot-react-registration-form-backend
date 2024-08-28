@@ -10,7 +10,9 @@ public class MyWebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000") // Change this to your frontend's origin
+                .allowedOrigins("http://localhost:3000",
+                        "https://springboot-react-registration-form-frontend.vercel.app/") // Change this to your
+                                                                                           // frontend's origin
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);
